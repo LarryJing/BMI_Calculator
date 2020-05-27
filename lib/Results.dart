@@ -53,12 +53,15 @@ class Results extends StatelessWidget {
                         fontWeight: FontWeight.bold,
                       ),
                     ),
-                    Text(
-                      exp,
-                      style: TextStyle(
-                        fontSize: 22.0,
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 10.0),
+                      child: Text(
+                        exp,
+                        style: TextStyle(
+                          fontSize: 22.0,
+                        ),
+                        textAlign: TextAlign.center,
                       ),
-                      textAlign: TextAlign.center,
                     ),
                   ],
                 ),

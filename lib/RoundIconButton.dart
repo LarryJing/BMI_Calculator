@@ -7,11 +7,12 @@ class RoundIconButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    double screenHeight = MediaQuery.of(context).size.height;
     return RawMaterialButton(
       child: icon,
       constraints: BoxConstraints.tightFor(
-        width: 56.0,
-        height: 56.0,
+        width: screenHeight / 17,
+        height: screenHeight / 17,
       ),
       shape: CircleBorder(),
       fillColor: Colors.grey[800],

@@ -8,13 +8,14 @@ class ReusableCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    double screenHeight = MediaQuery.of(context).size.height;
     return GestureDetector(
       onTap: () {
         func();
       },
       child: Container(
         child: cardChild,
-        margin: EdgeInsets.all(15.0),
+        margin: EdgeInsets.all(screenHeight / 115),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10.0),
           color: color,

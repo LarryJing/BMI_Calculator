@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
 class InsideCard extends StatelessWidget {
-  final double iconSize = 80.0;
+  final double iconSize;
   final double fontSize = 20.0;
   final IconData icon;
   final String text;
   final double sizedBoxHeight;
-  InsideCard(this.icon, this.sizedBoxHeight, this.text);
+  InsideCard(this.icon, this.sizedBoxHeight, this.text, {this.iconSize});
 
   @override
   Widget build(BuildContext context) {
