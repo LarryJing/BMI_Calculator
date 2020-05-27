@@ -1,3 +1,4 @@
+import 'package:bmi_calculator/Calculator.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:bmi_calculator/ReusableCard.dart';
@@ -42,7 +43,7 @@ class _InputPageState extends State<InputPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('BMI CALCULATOR'),
+        title: Text('BMI Calculator'),
       ),
       body: Column(
         children: <Widget>[
@@ -239,15 +240,26 @@ class _InputPageState extends State<InputPage> {
           ),
           GestureDetector(
             onTap: () {
+              Calculator brain = Calculator(height, weight, age);
+              String bmi = brain.calculateBMI();
+              String result = brain.calculateResult();
+              String exp = brain.getExplanation();
               Navigator.push(context, MaterialPageRoute(builder: (context) {
-                return Results();
+                return Results(result, bmi, exp);
               }));
             },
             child: Container(
+              child: Center(
+                child: Text(
+                  'CALCULATE',
+                  style: TextStyle(fontSize: 25.0, fontWeight: FontWeight.bold),
+                ),
+              ),
               color: bottomColor,
               height: bottomHeight,
               width: double.infinity,
               margin: EdgeInsets.only(top: 10.0),
+              padding: EdgeInsets.only(bottom: 15.0),
             ),
           ),
         ],
