@@ -25,7 +25,7 @@ class Calculator {
 
   String getExplanation() {
     if (_bmi >= 50)
-      return 'Lose some weight you fat fuck.';
+      return 'Lose some weight. You\'re fat.';
     else if (_bmi >= 25)
       return 'Your body weight is higher than normal. Try to eat healthier and exercise more!';
     else if (_bmi >= 18.5)
