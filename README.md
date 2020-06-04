@@ -3,4 +3,4 @@ Body Mass Index Calculator inspired by the beautiful designs made by [Ruben Vaal
 
 Can switch between metric and imperial units.
 
-PlayStore link:https://play.google.com/store/apps/details?id=co.lawrencejing.bmicalculator
+PlayStore link: https://play.google.com/store/apps/details?id=co.lawrencejing.bmicalculator
